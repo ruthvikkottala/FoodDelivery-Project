@@ -13,7 +13,7 @@ public class Restaurant {
 	private String name;
 	private List<String> categories;
 	private List<Item> items;
-	private int rating;
+	private float rating;
 	public Restaurant() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -49,10 +49,10 @@ public class Restaurant {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
-	public int getRating() {
+	public float getRating() {
 		return rating;
 	}
-	public void setRating(int rating) {
+	public void setRating(float rating) {
 		this.rating = rating;
 	}
 	
