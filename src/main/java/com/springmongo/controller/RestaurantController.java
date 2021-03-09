@@ -14,7 +14,7 @@ import com.springmongo.model.Restaurant;
 import com.springmongo.service.RestaurantService;
 
 @RestController
-//@RequestMapping("/")
+@RequestMapping("/api")
 public class RestaurantController {
 	
 	@Autowired
