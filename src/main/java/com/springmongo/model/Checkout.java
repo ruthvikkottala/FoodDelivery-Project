@@ -7,7 +7,7 @@ public class Checkout {
 	private String state;
 	public Checkout() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public Checkout(String name, String line1, String city, String state) {
 		super();

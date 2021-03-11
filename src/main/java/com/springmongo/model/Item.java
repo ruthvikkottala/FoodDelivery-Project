@@ -1,23 +1,50 @@
 package com.springmongo.model;
 
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="Items")
 public class Item {
-	
-	private String item_name;
+	@Id
+	private String id;
+	private String restid;
+	private String itemName;
 	private int price;
+	private String category;
+	private String itemDetails;
+	private List<String> reviews;
 	public Item() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-	public Item(String item_name, int price) {
+	public Item(String restid, String itemName, int price, String category, String itemDetails, List<String> reviews) {
 		super();
-		this.item_name = item_name;
+		this.restid = restid;
+		this.itemName = itemName;
 		this.price = price;
+		this.category = category;
+		this.itemDetails = itemDetails;
+		this.reviews = reviews;
 	}
-	public String getItem_name() {
-		return item_name;
+	public String getId() {
+		return id;
 	}
-	public void setItem_name(String item_name) {
-		this.item_name = item_name;
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getRestid() {
+		return restid;
+	}
+	public void setRestid(String restid) {
+		this.restid = restid;
+	}
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
 	}
 	public int getPrice() {
 		return price;
@@ -25,5 +52,27 @@ public class Item {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getItemDetails() {
+		return itemDetails;
+	}
+	public void setItemDetails(String itemDetails) {
+		this.itemDetails = itemDetails;
+	}
+	public List<String> getReviews() {
+		return reviews;
+	}
+	public void setReviews(List<String> reviews) {
+		this.reviews = reviews;
+	}
+	
+	
+	
+
 
 }

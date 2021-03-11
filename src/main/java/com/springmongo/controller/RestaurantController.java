@@ -10,22 +10,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springmongo.model.Item;
 import com.springmongo.model.Restaurant;
+import com.springmongo.service.ItemService;
 import com.springmongo.service.RestaurantService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/restaurants")
 public class RestaurantController {
 	
 	@Autowired
 	RestaurantService restaurantservice;
+	@Autowired
+	ItemService itemservice;
 	
-	@GetMapping("/restaurants")
+	@GetMapping("/")
 	public List<Restaurant> getAllrestaurants(){
 		return restaurantservice.getAllrestaurants();
 		}
 	
-	@PostMapping("/restaurants")
+	@PostMapping("/add")
 	public Restaurant addRestaurant(@RequestBody Restaurant restaurant) {
 		return restaurantservice.addRestaurant(restaurant);
 	}
@@ -33,6 +37,10 @@ public class RestaurantController {
 	@GetMapping("/category")
 	public List<Restaurant> getByCategory(@RequestParam(name = "category") String category){
 		return restaurantservice.getByCategory(category);
+	}
+	@GetMapping("/getItems")
+	public List<Item> getItems(@RequestParam("id") String id){
+		return itemservice.getItems(id);
 	}
 	
 }

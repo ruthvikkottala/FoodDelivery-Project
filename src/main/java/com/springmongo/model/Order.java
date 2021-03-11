@@ -10,20 +10,23 @@ public class Order {
 	@Id
 	private String id;
 	private String user;
-	private List<Order_Items> order_items;
+	private String restaurantid;
+	private List<OrderItems> orderItems;
 	private int total;
-	private String date_created;
+	private String dateCreated;
 	private Checkout checkout;
 	public Order() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-	public Order(String user, List<Order_Items> order_items, int total, String date_created, Checkout checkout) {
+	public Order(String user, String restaurantid, List<OrderItems> orderItems, int total, String dateCreated,
+			Checkout checkout) {
 		super();
 		this.user = user;
-		this.order_items = order_items;
+		this.restaurantid = restaurantid;
+		this.orderItems = orderItems;
 		this.total = total;
-		this.date_created = date_created;
+		this.dateCreated = dateCreated;
 		this.checkout = checkout;
 	}
 	public String getId() {
@@ -38,11 +41,17 @@ public class Order {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public List<Order_Items> getOrder_items() {
-		return order_items;
+	public String getRestaurantid() {
+		return restaurantid;
 	}
-	public void setOrder_items(List<Order_Items> order_items) {
-		this.order_items = order_items;
+	public void setRestaurantid(String restaurantid) {
+		this.restaurantid = restaurantid;
+	}
+	public List<OrderItems> getOrderItems() {
+		return orderItems;
+	}
+	public void setOrderItems(List<OrderItems> orderItems) {
+		this.orderItems = orderItems;
 	}
 	public int getTotal() {
 		return total;
@@ -50,11 +59,11 @@ public class Order {
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public String getDate_created() {
-		return date_created;
+	public String getDateCreated() {
+		return dateCreated;
 	}
-	public void setDate_created(String date_created) {
-		this.date_created = date_created;
+	public void setDateCreated(String dateCreated) {
+		this.dateCreated = dateCreated;
 	}
 	public Checkout getCheckout() {
 		return checkout;
@@ -62,6 +71,8 @@ public class Order {
 	public void setCheckout(Checkout checkout) {
 		this.checkout = checkout;
 	}
+	
+	
 	
 	
 

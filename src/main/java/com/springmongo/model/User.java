@@ -15,7 +15,7 @@ public class User {
 	private boolean isLoggedIn;
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public User(String name, String email, String phone, String username, String password, boolean isLoggedIn) {
 		super();

@@ -12,18 +12,16 @@ public class Restaurant {
 	private String id;
 	private String name;
 	private List<String> categories;
-	private List<Item> items;
-	private float rating;
+	
 	public Restaurant() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-	public Restaurant(String name, List<String> categories, List<Item> items, int rating) {
+	public Restaurant(String name, List<String> categories) {
 		super();
 		this.name = name;
 		this.categories = categories;
-		this.items = items;
-		this.rating = rating;
+		
 	}
 	public String getId() {
 		return id;
@@ -43,18 +41,10 @@ public class Restaurant {
 	public void setCategories(List<String> categories) {
 		this.categories = categories;
 	}
-	public List<Item> getItems() {
-		return items;
-	}
-	public void setItems(List<Item> items) {
-		this.items = items;
-	}
-	public float getRating() {
-		return rating;
-	}
-	public void setRating(float rating) {
-		this.rating = rating;
-	}
+	
+	
+
+	
 	
 	
 	
